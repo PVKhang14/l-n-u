@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="328.0" prefWidth="600.0" stylesheets="@../../../primer-light.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.library.controllers.RegisterController">
+   <children>
+      <ImageView fitHeight="179.0" fitWidth="214.0" layoutX="57.0" layoutY="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../../img/user-interface.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="253.0" layoutY="92.0" prefHeight="145.0" prefWidth="318.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="154.5" minWidth="10.0" prefWidth="119.5" />
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="212.0" minWidth="10.0" prefWidth="200.5" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="55.5" minHeight="10.0" prefHeight="47.0" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="73.0" minHeight="10.0" prefHeight="57.5" vgrow="SOMETIMES" />
+          <RowConstraints maxHeight="69.5" minHeight="10.0" prefHeight="49.5" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Tài khoản" />
+            <Label text="Mật khẩu" GridPane.rowIndex="1" />
+            <Label text="Nhập lại mật khẩu" GridPane.rowIndex="2" />
+            <TextField fx:id="txtTaiKhoan" promptText="Nhập tài khoản" GridPane.columnIndex="1" />
+            <PasswordField fx:id="pwMatKhau" promptText="Nhập mật khẩu" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+            <PasswordField fx:id="pwReMatKhau" promptText="Nhập lại mật khẩu" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+         </children>
+      </GridPane>
+      <Label layoutX="380.0" layoutY="25.0" text="Đăng kí">
+         <font>
+            <Font size="30.0" />
+         </font>
+      </Label>
+      <Button layoutX="357.0" layoutY="247.0" mnemonicParsing="false" onAction="#onClickRegister" prefHeight="25.0" prefWidth="125.0" text="Đăng kí" />
+   </children>
+</AnchorPane>
